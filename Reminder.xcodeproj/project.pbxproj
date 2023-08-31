@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A72463A42A9F36B0002F765C /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72463A32A9F36B0002F765C /* ReminderListView.swift */; };
+		A72463A92A9FC9A6002F765C /* NewReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72463A82A9FC9A6002F765C /* NewReminderListView.swift */; };
+		A74B35562A9D201300A9088B /* NewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74B35552A9D201300A9088B /* NewListView.swift */; };
 		A7B240DD2A9C9A7C00889F5D /* ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B240DC2A9C9A7C00889F5D /* ReminderApp.swift */; };
-		A7B240DF2A9C9A7C00889F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B240DE2A9C9A7C00889F5D /* ContentView.swift */; };
+		A7B240DF2A9C9A7C00889F5D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B240DE2A9C9A7C00889F5D /* HomeView.swift */; };
 		A7B240E12A9C9A7E00889F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B240E02A9C9A7E00889F5D /* Assets.xcassets */; };
 		A7B240E52A9C9A7E00889F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B240E42A9C9A7E00889F5D /* Preview Assets.xcassets */; };
+		A7B240EF2A9C9AF900889F5D /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B240EE2A9C9AF900889F5D /* HomeModel.swift */; };
+		A7B240F12A9C9B0B00889F5D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B240F02A9C9B0B00889F5D /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A72463A32A9F36B0002F765C /* ReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListView.swift; sourceTree = "<group>"; };
+		A72463A82A9FC9A6002F765C /* NewReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderListView.swift; sourceTree = "<group>"; };
+		A74B35552A9D201300A9088B /* NewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListView.swift; sourceTree = "<group>"; };
 		A7B240D92A9C9A7C00889F5D /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B240DC2A9C9A7C00889F5D /* ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderApp.swift; sourceTree = "<group>"; };
-		A7B240DE2A9C9A7C00889F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A7B240DE2A9C9A7C00889F5D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A7B240E02A9C9A7E00889F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7B240E22A9C9A7E00889F5D /* Reminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reminder.entitlements; sourceTree = "<group>"; };
 		A7B240E42A9C9A7E00889F5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A7B240EE2A9C9AF900889F5D /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		A7B240F02A9C9B0B00889F5D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A72463A22A9F33A5002F765C /* ReminderList */ = {
+			isa = PBXGroup;
+			children = (
+				A72463A32A9F36B0002F765C /* ReminderListView.swift */,
+			);
+			path = ReminderList;
+			sourceTree = "<group>";
+		};
+		A72463A72A9FC960002F765C /* NemReminderList */ = {
+			isa = PBXGroup;
+			children = (
+				A72463A82A9FC9A6002F765C /* NewReminderListView.swift */,
+			);
+			path = NemReminderList;
+			sourceTree = "<group>";
+		};
+		A74B35542A9D1FE700A9088B /* NewList */ = {
+			isa = PBXGroup;
+			children = (
+				A74B35552A9D201300A9088B /* NewListView.swift */,
+				A72463A72A9FC960002F765C /* NemReminderList */,
+			);
+			path = NewList;
+			sourceTree = "<group>";
+		};
 		A7B240D02A9C9A7C00889F5D = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A7B240DC2A9C9A7C00889F5D /* ReminderApp.swift */,
-				A7B240DE2A9C9A7C00889F5D /* ContentView.swift */,
+				A7B240ED2A9C9AC300889F5D /* HomeScreen */,
 				A7B240E02A9C9A7E00889F5D /* Assets.xcassets */,
 				A7B240E22A9C9A7E00889F5D /* Reminder.entitlements */,
 				A7B240E32A9C9A7E00889F5D /* Preview Content */,
@@ -67,6 +102,18 @@
 				A7B240E42A9C9A7E00889F5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A7B240ED2A9C9AC300889F5D /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A7B240DE2A9C9A7C00889F5D /* HomeView.swift */,
+				A7B240F02A9C9B0B00889F5D /* HomeViewModel.swift */,
+				A7B240EE2A9C9AF900889F5D /* HomeModel.swift */,
+				A72463A22A9F33A5002F765C /* ReminderList */,
+				A74B35542A9D1FE700A9088B /* NewList */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B240DF2A9C9A7C00889F5D /* ContentView.swift in Sources */,
+				A72463A42A9F36B0002F765C /* ReminderListView.swift in Sources */,
+				A7B240DF2A9C9A7C00889F5D /* HomeView.swift in Sources */,
 				A7B240DD2A9C9A7C00889F5D /* ReminderApp.swift in Sources */,
+				A7B240F12A9C9B0B00889F5D /* HomeViewModel.swift in Sources */,
+				A7B240EF2A9C9AF900889F5D /* HomeModel.swift in Sources */,
+				A74B35562A9D201300A9088B /* NewListView.swift in Sources */,
+				A72463A92A9FC9A6002F765C /* NewReminderListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +331,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -317,7 +369,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;

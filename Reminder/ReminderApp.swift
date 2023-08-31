@@ -2,7 +2,7 @@
 //  ReminderApp.swift
 //  Reminder
 //
-//  Created by Binisor, Ionut Aurel (Cognizant) on 28.08.2023.
+//  Created by Binisor, Lavinia on 28.08.2023.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct ReminderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(lists: MemoList.previewLists)
         }
     }
 }
