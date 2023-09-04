@@ -11,6 +11,12 @@ struct HomeView: View {
     @StateObject private var viewModel: HomeViewModel
     @State private var isNewListViewPresented = false
     
+    
+    @State private var presentEditNameAlert = false
+    @State private var selectedList = MemoList.previewList
+    @State private var selectedListName = MemoList.previewList.name
+    
+    
     init(lists: [MemoList]) {
         let listViewModel = HomeViewModel(lists: lists)
         _viewModel = StateObject(wrappedValue: listViewModel)
@@ -32,8 +38,27 @@ struct HomeView: View {
                     } label: {
                         Label("Duplicate", systemImage: "doc.on.doc")
                     }
+                    
+                    Button {
+                        selectedList = list
+                        selectedListName = list.name
+                        presentEditNameAlert = true
+                    } label: {
+                        Label("Rename", systemImage:"rectangle.and.pencil.and.ellipsis")
+                    }
                 }
             }
+            .alert("Rename", isPresented: $presentEditNameAlert) {
+                TextField("Title", text: $selectedListName)
+                
+                Button("Cancel", role: .cancel) {
+                }
+                
+                Button("Save") {
+                    selectedList.name = selectedListName
+                }
+            }
+            
             .navigationTitle("Remainders")
             .toolbar {
                 showNewListButton
