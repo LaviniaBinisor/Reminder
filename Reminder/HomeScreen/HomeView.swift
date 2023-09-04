@@ -18,11 +18,20 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            List($viewModel.lists, editActions: .all) { $list in
+            List($viewModel.lists, editActions: .delete) { $list in
                 NavigationLink {
                     ReminderListView(memoList: list)
                 } label: {
                     MemoListRow(list: list)
+                }
+                .contextMenu {
+                    Button {
+                        withAnimation {
+                            viewModel.duplicate(list: list)
+                        }
+                    } label: {
+                        Label("Duplicate", systemImage: "doc.on.doc")
+                    }
                 }
             }
             .navigationTitle("Remainders")
