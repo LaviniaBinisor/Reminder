@@ -11,7 +11,6 @@ struct HomeView: View {
     @StateObject private var viewModel: HomeViewModel
     @State private var isNewListViewPresented = false
     
-    
     @State private var presentEditNameAlert = false
     @State private var selectedList = MemoList.previewList
     @State private var selectedListName = MemoList.previewList.name

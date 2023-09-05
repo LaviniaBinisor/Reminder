@@ -16,6 +16,7 @@
 		A7B240E52A9C9A7E00889F5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B240E42A9C9A7E00889F5D /* Preview Assets.xcassets */; };
 		A7B240EF2A9C9AF900889F5D /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B240EE2A9C9AF900889F5D /* HomeModel.swift */; };
 		A7B240F12A9C9B0B00889F5D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B240F02A9C9B0B00889F5D /* HomeViewModel.swift */; };
+		AAB7EA472AA756F40046020E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7EA462AA756F40046020E /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A7B240E42A9C9A7E00889F5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7B240EE2A9C9AF900889F5D /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		A7B240F02A9C9B0B00889F5D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AAB7EA462AA756F40046020E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				A72463A82A9FC9A6002F765C /* NewReminderListView.swift */,
+				AAB7EA462AA756F40046020E /* TestView.swift */,
 			);
 			path = NemReminderList;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				A7B240DF2A9C9A7C00889F5D /* HomeView.swift in Sources */,
 				A7B240DD2A9C9A7C00889F5D /* ReminderApp.swift in Sources */,
 				A7B240F12A9C9B0B00889F5D /* HomeViewModel.swift in Sources */,
+				AAB7EA472AA756F40046020E /* TestView.swift in Sources */,
 				A7B240EF2A9C9AF900889F5D /* HomeModel.swift in Sources */,
 				A74B35562A9D201300A9088B /* NewListView.swift in Sources */,
 				A72463A92A9FC9A6002F765C /* NewReminderListView.swift in Sources */,
