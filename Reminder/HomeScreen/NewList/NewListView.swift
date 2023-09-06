@@ -18,7 +18,7 @@ struct NewListView: View {
     
     var body: some View {
         NavigationStack {
-            Form {
+            List {
                 sectionTitle
                 
                 colorSection
@@ -62,7 +62,7 @@ private extension NewListView {
                         .scaleEffect(1.3)
                 }
                 .frame(maxWidth: .infinity)
-
+    
             TextField("List name", text: $listName)
         }
     }
@@ -73,7 +73,7 @@ private extension NewListView {
         ]
         
         let columns = [
-            GridItem(.adaptive(minimum: 40))
+            GridItem(.adaptive(minimum: 45))
         ]
         
         return Section {
@@ -112,25 +112,31 @@ private extension NewListView {
         ]
         
         let columns = [
-            GridItem(.adaptive(minimum: 35))
+            GridItem(.adaptive(minimum: 45))
         ]
         
         return Section {
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 8) {
+                LazyVGrid(columns: columns) {
                     ForEach(availableSymbols, id: \.self) { symbol in
                         Button {
                             selectedSymbol = symbol
                         } label: {
-                            ZStack {
-                                Circle()
-                                    .foregroundColor(.secondary)
-                                Image(systemName: symbol)
-                                    .foregroundColor(.white)
-                            }
+                            Circle()
+                                .foregroundColor(.secondary)
+                                .overlay {
+                                    Image(systemName: symbol)
+                                        .foregroundColor(.white)
+                                }
+                                .padding(5)
+                                .overlay {
+                                    Circle()
+                                        .stroke(selectedSymbol == symbol ? selectedColor : .clear, lineWidth: 3)
+                                }
                         }
                     }
                 }
+                .padding([.top, .horizontal], 6)
             }
         } header: {
             Text("Symbols")
