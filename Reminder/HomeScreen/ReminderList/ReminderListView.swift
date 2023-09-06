@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ReminderListView: View {
     @ObservedObject var memoList: MemoList
+    @State private var searchText = ""
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(memoList.reminders) { reminder in 
+                ForEach(reminderResults) { reminder in
                     ReminderRow(reminder: reminder)
                 }
                 .onDelete { index in
@@ -27,8 +28,8 @@ struct ReminderListView: View {
                 } label: {
                     Image(systemName: "plus.circle")
                 }
-                
             }
+            .searchable(text: $searchText)
         }
     }
     
@@ -41,12 +42,22 @@ struct ReminderListView: View {
             memoList.reminders.append(Reminder())
         }
     }
+    
+    var reminderResults: [Reminder] {
+        if searchText.isEmpty {
+            return memoList.reminders
+        } else {
+            return memoList.reminders.filter { reminder in
+                reminder.name.contains(searchText) || reminder.details.contains(searchText)
+            }
+        }
+    }
 }
 
 private struct ReminderRow: View {
     @ObservedObject var reminder: Reminder
     @FocusState var isNameFocused: Bool
-
+    
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
             Button {
