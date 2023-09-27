@@ -14,6 +14,9 @@ class HomeViewModel: ObservableObject {
         self.lists = lists
     }
     
+    private var searchReminder = ""
+
+    
     func addNewList(for list: MemoList) {
         lists.append(list)
     }

@@ -15,6 +15,7 @@ struct HomeView: View {
     @State private var selectedList = MemoList.previewList
     @State private var selectedListName = MemoList.previewList.name
     
+    @State private var totalReminders: Int = 0
     
     init(lists: [MemoList]) {
         let listViewModel = HomeViewModel(lists: lists)
@@ -23,6 +24,61 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image(systemName: "calendar")
+                            .font(.title3)
+                            .padding()
+                            .foregroundStyle(.white)
+                            .background(Circle())
+                            .foregroundStyle(.blue)
+                        
+                        Spacer()
+                        
+                        Text("\(totalReminders)")
+                            .foregroundColor(.white)
+                    }
+                    
+                    Text(Date.now, style: .date)
+                        .foregroundColor(.white)
+                }
+                .frame(width: 200, height: 80)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 20, style: .circular)
+                )
+                .foregroundColor(.secondary)
+                
+               // Spacer()
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image(systemName: "folder")
+                            .imageScale(.medium)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Circle())
+                            .foregroundColor(.indigo)
+                        
+                        Spacer()
+                        
+                        Text("\(totalReminders)")
+                            .foregroundColor(.white)
+                    }
+                    
+                    Text("All")
+                        .foregroundColor(.white)
+                }
+                .frame(width: 200, height: 80)
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 20, style: .circular)
+                )
+                .foregroundColor(.gray)
+            }
+            
+            
             List($viewModel.lists, editActions: .delete) { $list in
                 NavigationLink {
                     ReminderListView(memoList: list)
